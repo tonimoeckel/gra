@@ -1,0 +1,44 @@
+html,
+body {
+  font-family: sans-serif;
+  color: white;
+  background-color: #0b0b0b;
+}
+
+a {
+  color: lightblue;
+}
+
+#image {
+  height: 500px;
+  width: 500px;
+  display: block;
+  background: url("scheibe-dark.jpg") 0px 0px;
+}
+
+#expolosion {
+  height: 1000px;
+  width: 1400px;
+  display: block;
+  animation-name: sprite;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(6);
+  animation-iteration-count: infinite;
+  background: url("explosion.jpg") 0px 0px;
+  transform: translate(-25%, -25%) scale(0.5);
+}
+
+@media only screen and (min-width: 1920px) {
+  #expolosion {
+    transform: scale(1);
+  }
+}
+
+@keyframes sprite {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -8400px;
+  }
+}
